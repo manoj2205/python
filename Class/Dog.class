@@ -1,0 +1,27 @@
+'''
+object - In python everything everything is object.An object is an instance of a class. It holds data (attributes) and can do actions (methods) defined in that class.
+Class - Car - blueprint of all cars, A class in python is a blueprint for creating objects. It allows to bundle data(attributes) and behaviour(methods) together.
+Object - my_car=Car("Toyata","Blue")-specific car
+Attribute - An attribute is a variable attached to an object. It holds data about that specific object.
+Attributes are usually created inside the __init__() method when defining a class.
+Getters and setters:
+getters and setters are methods used to get (read) or set (write) the values of private variables in a class.
+Why use them?
+To hide internal data
+To validate before setting a value
+To keep your code safe and maintainable
+
+'''
+class Dog(object):
+    def __init__(self,name,breed):
+        self.name=name #public attribute
+        self.breed=breed #attribute
+        
+    def bark(self): #method 
+        print(f"{self.name} is barking")
+
+s1 = Dog("Happy","Sihuzu")
+s1.name # you can access it directly for public attribute
+s1.name = ("Rocky")
+s1.name
+s1.breed
